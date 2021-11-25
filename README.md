@@ -34,7 +34,8 @@ If you wish to start your container environment just the same as the actual lab 
 for each srlinux node copy and paste the related command file
 ie for leaf1: leaf1 infoflat.txt
 
-<b>Important Note</b>
+<b>Important Note !</b> <br>
+
 after logging in the srlinux containers, to switch to srlinux environemnt, type
 >sr_cli
 
