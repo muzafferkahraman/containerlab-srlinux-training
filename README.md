@@ -36,7 +36,7 @@ ie for leaf1: leaf1 infoflat.txt
 
 <b>Important Note !</b> <br>
 
-after logging in the srlinux containers, to switch to srlinux environemnt, type
+after logging in the srlinux containers, to switch to srlinux environment, type
 >sr_cli
 
 
