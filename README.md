@@ -1,7 +1,7 @@
 <h1>Container Lab Setup for DC Fabric Fundamentals Training</h1>
-![](schema.jpg)
 
 This is to setup the lab environment for the Nokia DC Fabric Fundamentals Training, using the containerlab, as below
+![](schema.jpg)
 
 
 To install containerlab (CentOS 7)
@@ -25,13 +25,15 @@ You can connect to each node (ie host-11) by
 
 Alpine Linux hosts' eth1 interfaces also need to be provisioned <br>
 You can do that by running the example command below for each host
+
 > ifconfig eth1 192.168.101.2 netmask 255.255.255.240 broadcast 0.0.0.0
 
 
 This will have installed an empty configuration.
 If you wish to start your container environment just the same as the actual lab environment, you have to add some configuration in advance.
 for each srlinux node copy and paste the related command file
-ie for leaf1: 
+ie for leaf1: leaf1 infoflat.txt
+
 
 
 
