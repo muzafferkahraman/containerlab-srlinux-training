@@ -39,7 +39,7 @@ ie for leaf1: leaf1 infoflat.txt
 after logging in the srlinux containers, to switch to srlinux environment, type
 >sr_cli
 
-
+Thanks 
 
 
 
