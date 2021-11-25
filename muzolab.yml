@@ -1,0 +1,42 @@
+name: muzolab
+
+topology:
+  kinds:
+    srl:
+      image: ghcr.io/nokia/srlinux
+    linux:
+      image: ghcr.io/hellt/network-multitool
+  nodes:
+    spine1:
+      kind: srl
+      type: ixr10
+    spine2:
+      kind: srl
+      type: ixr10
+    leaf1:
+      kind: srl
+      type: ixrd3
+    leaf2:
+      kind: srl
+      type: ixrd3
+    host10:
+      kind: "linux"
+    host11:
+      kind: "linux"
+    host12:
+      kind: "linux"
+    host20:
+      kind: "linux"
+
+
+  links:
+    - endpoints: ["spine1:e1-1", "leaf1:e1-1"]
+    - endpoints: ["spine1:e1-2", "leaf2:e1-1"]
+    - endpoints: ["spine2:e1-1", "leaf1:e1-2"]
+    - endpoints: ["spine2:e1-2", "leaf2:e1-2"]
+
+    - endpoints: ["host10:eth1", "leaf1:e1-10"]
+    - endpoints: ["host11:eth1", "leaf1:e1-11"]
+    - endpoints: ["host12:eth1", "leaf1:e1-12"]
+    - endpoints: ["host20:eth1", "leaf2:e1-10"]
+
