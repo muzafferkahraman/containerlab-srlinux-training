@@ -1,0 +1,96 @@
+enter candidate
+set / interface mgmt0
+set / interface mgmt0 admin-state enable
+set / interface mgmt0 subinterface 0
+set / interface mgmt0 subinterface 0 admin-state enable
+set / interface mgmt0 subinterface 0 ipv4
+set / interface mgmt0 subinterface 0 ipv4 dhcp-client
+set / interface mgmt0 subinterface 0 ipv6
+set / interface mgmt0 subinterface 0 ipv6 dhcp-client
+set / system
+set / system aaa
+set / system aaa authentication
+set / system aaa authentication authentication-method [ local ]
+set / system aaa server-group local
+set / system ssh-server
+set / system ssh-server network-instance mgmt
+set / system ssh-server network-instance mgmt admin-state enable
+set / system logging
+set / system logging buffer messages
+set / system logging buffer messages rotate 3
+set / system logging buffer messages size 10000000
+set / system logging buffer messages facility local6
+set / system logging buffer messages facility local6 priority
+set / system logging buffer messages facility local6 priority match-above informational
+set / system logging buffer system
+set / system logging buffer system facility auth
+set / system logging buffer system facility auth priority
+set / system logging buffer system facility auth priority match-above warning
+set / system logging buffer system facility cron
+set / system logging buffer system facility cron priority
+set / system logging buffer system facility cron priority match-above warning
+set / system logging buffer system facility daemon
+set / system logging buffer system facility daemon priority
+set / system logging buffer system facility daemon priority match-above warning
+set / system logging buffer system facility ftp
+set / system logging buffer system facility ftp priority
+set / system logging buffer system facility ftp priority match-above warning
+set / system logging buffer system facility kern
+set / system logging buffer system facility kern priority
+set / system logging buffer system facility kern priority match-above warning
+set / system logging buffer system facility lpr
+set / system logging buffer system facility lpr priority
+set / system logging buffer system facility lpr priority match-above warning
+set / system logging buffer system facility mail
+set / system logging buffer system facility mail priority
+set / system logging buffer system facility mail priority match-above warning
+set / system logging buffer system facility news
+set / system logging buffer system facility news priority
+set / system logging buffer system facility news priority match-above warning
+set / system logging buffer system facility syslog
+set / system logging buffer system facility syslog priority
+set / system logging buffer system facility syslog priority match-above warning
+set / system logging buffer system facility user
+set / system logging buffer system facility user priority
+set / system logging buffer system facility user priority match-above warning
+set / system logging buffer system facility uucp
+set / system logging buffer system facility uucp priority
+set / system logging buffer system facility uucp priority match-above warning
+set / system logging buffer system facility local0
+set / system logging buffer system facility local0 priority
+set / system logging buffer system facility local0 priority match-above warning
+set / system logging buffer system facility local1
+set / system logging buffer system facility local1 priority
+set / system logging buffer system facility local1 priority match-above warning
+set / system logging buffer system facility local2
+set / system logging buffer system facility local2 priority
+set / system logging buffer system facility local2 priority match-above warning
+set / system logging buffer system facility local3
+set / system logging buffer system facility local3 priority
+set / system logging buffer system facility local3 priority match-above warning
+set / system logging buffer system facility local4
+set / system logging buffer system facility local4 priority
+set / system logging buffer system facility local4 priority match-above warning
+set / system logging buffer system facility local5
+set / system logging buffer system facility local5 priority
+set / system logging buffer system facility local5 priority match-above warning
+set / system logging buffer system facility local7
+set / system logging buffer system facility local7 priority
+set / system logging buffer system facility local7 priority match-above warning
+set / system logging file messages
+set / system logging file messages rotate 3
+set / system logging file messages size 10000000
+set / system logging file messages facility local6
+set / system logging file messages facility local6 priority
+set / system logging file messages facility local6 priority match-above warning
+set / network-instance mgmt
+set / network-instance mgmt type ip-vrf
+set / network-instance mgmt admin-state enable
+set / network-instance mgmt description "Management network instance"
+set / network-instance mgmt interface mgmt0.0
+set / network-instance mgmt protocols
+set / network-instance mgmt protocols linux
+set / network-instance mgmt protocols linux import-routes true
+set / network-instance mgmt protocols linux export-routes true
+set / network-instance mgmt protocols linux export-neighbors true
+commit now
