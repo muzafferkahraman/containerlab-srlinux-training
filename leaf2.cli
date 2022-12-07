@@ -127,7 +127,7 @@ set / network-instance mgmt protocols linux export-neighbors true
 set / network-instance default
 set / network-instance default type default
 set / network-instance default admin-state enable
-set / network-instance default interface ethernet-1/1.1
-set / network-instance default interface ethernet-1/2.1
+set / network-instance default interface ethernet-1/1.0
+set / network-instance default interface ethernet-1/2.0
 set / network-instance default interface lo0.0
 set / network-instance default interface system0.0
