@@ -10,9 +10,11 @@ topology:
     spine1:
       kind: srl
       type: ixr10
+      startup-config: spine1.cli
     spine2:
       kind: srl
       type: ixr10
+      startup-config: spine2.cli
     leaf1:
       kind: srl
       type: ixrd3
