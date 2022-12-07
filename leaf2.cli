@@ -146,3 +146,33 @@ set / network-instance default interface ethernet-1/1.0
 set / network-instance default interface ethernet-1/2.0
 set / network-instance default interface lo0.0
 set / network-instance default interface system0.0
+set / network-instance default protocols ospf
+set / network-instance default protocols ospf instance ospf1
+set / network-instance default protocols ospf instance ospf1 admin-state enable
+set / network-instance default protocols ospf instance ospf1 version ospf-v2
+set / network-instance default protocols ospf instance ospf1 router-id 192.0.2.2
+set / network-instance default protocols ospf instance ospf1 max-ecmp-paths 2
+set / network-instance default protocols ospf instance ospf1 area 0.0.0.0
+set / network-instance default protocols ospf instance ospf1 area 0.0.0.0 interface ethernet-1/1.1
+set / network-instance default protocols ospf instance ospf1 area 0.0.0.0 interface ethernet-1/1.1 interface-type point-to-point
+set / network-instance default protocols ospf instance ospf1 area 0.0.0.0 interface ethernet-1/1.1 metric 5000
+set / network-instance default protocols ospf instance ospf1 area 0.0.0.0 interface ethernet-1/1.1 mtu 9000
+set / network-instance default protocols ospf instance ospf1 area 0.0.0.0 interface ethernet-1/2.1
+set / network-instance default protocols ospf instance ospf1 area 0.0.0.0 interface ethernet-1/2.1 interface-type point-to-point
+set / network-instance default protocols ospf instance ospf1 area 0.0.0.0 interface ethernet-1/2.1 metric 5000
+set / network-instance default protocols ospf instance ospf1 area 0.0.0.0 interface ethernet-1/2.1 mtu 9000
+set / network-instance default protocols ospf instance ospf1 area 0.0.0.0 interface system0.0
+set / network-instance default protocols ospf instance ospf3
+set / network-instance default protocols ospf instance ospf3 admin-state enable
+set / network-instance default protocols ospf instance ospf3 version ospf-v3
+set / network-instance default protocols ospf instance ospf3 address-family ipv4-unicast
+set / network-instance default protocols ospf instance ospf3 router-id 192.0.2.2
+set / network-instance default protocols ospf instance ospf3 max-ecmp-paths 2
+set / network-instance default protocols ospf instance ospf3 area 0.0.0.0
+set / network-instance default protocols ospf instance ospf3 area 0.0.0.0 interface ethernet-1/1.1
+set / network-instance default protocols ospf instance ospf3 area 0.0.0.0 interface ethernet-1/1.1 interface-type point-to-point
+set / network-instance default protocols ospf instance ospf3 area 0.0.0.0 interface ethernet-1/1.1 metric 1000
+set / network-instance default protocols ospf instance ospf3 area 0.0.0.0 interface ethernet-1/2.1
+set / network-instance default protocols ospf instance ospf3 area 0.0.0.0 interface ethernet-1/2.1 interface-type point-to-point
+set / network-instance default protocols ospf instance ospf3 area 0.0.0.0 interface ethernet-1/2.1 metric 1000
+set / network-instance default protocols ospf instance ospf3 area 0.0.0.0 interface lo0.0
