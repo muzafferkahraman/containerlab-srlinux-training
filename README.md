@@ -12,8 +12,8 @@ To install containerlab (CentOS 7)
 
 To setup the training lab environment
 > cd / <br>
-> git clone https://github.com/muzafferkahraman/dcfabric_training_lab <br>
-> cd dcfabric_training_lab <br>
+> git clone https://github.com/muzafferkahraman/SRLINUX-Training-Lab <br>
+> cd SRLINUX-Training-Lab <br>
 > containerlab deploy --topo muzolab.yml <br>
 
 After the script runs sucessfully, a  <b>docker ps -a </b> check should return an ouput like below
