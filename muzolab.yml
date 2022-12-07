@@ -18,9 +18,11 @@ topology:
     leaf1:
       kind: srl
       type: ixrd3
+      startup-config: leaf1.cli
     leaf2:
       kind: srl
       type: ixrd3
+      startup-config: leaf2.cli
     host10:
       kind: "linux"
     host11:
