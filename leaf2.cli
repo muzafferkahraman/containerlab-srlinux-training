@@ -14,6 +14,15 @@ set / interface ethernet-1/2 subinterface 0 ipv4
 set / interface ethernet-1/2 subinterface 0 ipv4 address 10.2.2.1/31
 set / interface ethernet-1/2 subinterface 0 ipv6
 set / interface ethernet-1/2 subinterface 0 ipv6 address 2001:1::10:2:2:1/127
+set / interface ethernet-1/5
+set / interface ethernet-1/5 admin-state enable
+set / interface ethernet-1/5 vlan-tagging true
+set / interface ethernet-1/5 subinterface 0
+set / interface ethernet-1/5 subinterface 0 type bridged
+set / interface ethernet-1/5 subinterface 0 vlan
+set / interface ethernet-1/5 subinterface 0 vlan encap
+set / interface ethernet-1/5 subinterface 0 vlan encap single-tagged
+set / interface ethernet-1/5 subinterface 0 vlan encap single-tagged vlan-id any
 set / interface lo0
 set / interface lo0 admin-state enable
 set / interface lo0 subinterface 0
