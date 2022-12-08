@@ -26,10 +26,6 @@ topology:
       startup-config: leaf2.cli
     host10:
       kind: "linux"
-    host11:
-      kind: "linux"
-    host12:
-      kind: "linux"
     host20:
       kind: "linux"
 
