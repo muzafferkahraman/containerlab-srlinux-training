@@ -6,6 +6,7 @@ topology:
       image: ghcr.io/nokia/srlinux
     linux:
       image: ghcr.io/hellt/network-multitool
+      
   nodes:
     spine1:
       kind: srl
@@ -34,13 +35,12 @@ topology:
 
 
   links:
+  
     - endpoints: ["spine1:e1-1", "leaf1:e1-1"]
     - endpoints: ["spine1:e1-2", "leaf2:e1-1"]
     - endpoints: ["spine2:e1-1", "leaf1:e1-2"]
     - endpoints: ["spine2:e1-2", "leaf2:e1-2"]
 
     - endpoints: ["host10:eth1", "leaf1:e1-10"]
-    - endpoints: ["host11:eth1", "leaf1:e1-11"]
-    - endpoints: ["host12:eth1", "leaf1:e1-12"]
     - endpoints: ["host20:eth1", "leaf2:e1-10"]
 
