@@ -24,11 +24,14 @@ You can do that by running
 > sh configure_hosts.sh
 
 Now you must be able to ping hosts from each other <br>
+
 from host10: 
 >ping 192.168.200.15 
 
 from host20: 
 >ping 192.168.100.15 
+
+
 
 You can connect to host nodes (ie host-11) 
 > docker exec -ti clab-muzolab-host11 bash
