@@ -23,12 +23,15 @@ Alpine Linux hosts also need to be configured <br>
 You can do that by running 
 > sh configure_hosts.sh
 
+Now you must be able to ping hosts from each other
+from host1: ping 192.168.200.15
+from host2: ping 192.168.100.15
+
 You can connect to host nodes (ie host-11) 
 > docker exec -ti clab-muzolab-host11 bash
 
 You can connect to SRLinux nodes (ie host-11) 
 > docker exec -ti clab-muzolab-spine1 sr_cli
-
 
 
 Thanks 
