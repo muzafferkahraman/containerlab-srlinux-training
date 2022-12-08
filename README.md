@@ -1,7 +1,7 @@
 <h1>Container Lab Setup for DC Fabric Fundamentals Training</h1>
 
 This is to setup the lab environment for the Nokia DC Fabric Fundamentals Training, using the containerlab, as below
-![](schema.jpg)
+![](schema.JPG)
 
 
 To install containerlab (CentOS 7)
