@@ -62,3 +62,15 @@ set / network-instance mgmt protocols linux import-routes true
 set / network-instance mgmt protocols linux export-routes true
 set / network-instance mgmt protocols linux export-neighbors true
 
+set / network-instance default static-routes
+set / network-instance default static-routes route 192.168.100.0/24
+set / network-instance default static-routes route 192.168.100.0/24 next-hop-group to_leaf1
+set / network-instance default static-routes route 192.168.200.0/24
+set / network-instance default static-routes route 192.168.200.0/24 next-hop-group to_leaf2
+set / network-instance default next-hop-groups
+set / network-instance default next-hop-groups group to_leaf1
+set / network-instance default next-hop-groups group to_leaf1 nexthop 1
+set / network-instance default next-hop-groups group to_leaf1 nexthop 1 ip-address 10.1.1.1
+set / network-instance default next-hop-groups group to_leaf2
+set / network-instance default next-hop-groups group to_leaf2 nexthop 1
+set / network-instance default next-hop-groups group to_leaf2 nexthop 1 ip-address 10.1.2.1
