@@ -14,30 +14,22 @@ To setup the training lab environment
 > cd / <br>
 > git clone https://github.com/muzafferkahraman/srlinux-training-lab <br>
 > cd srlinux-training-lab <br>
-> containerlab deploy --topo muzolab.yml <br>
+> clab dep -t muzolab.yml --reconfigure <br>
 
 After the script runs sucessfully, a  <b>docker ps -a </b> check should return an ouput like below
 ![](containers.jpg)
 
+Alpine Linux hosts also need to be configured <br>
+You can do that by running 
+> sh configure_hosts.sh
 
-You can connect to each node (ie host-11) by 
+You can connect to host nodes (ie host-11) 
 > docker exec -ti clab-muzolab-host11 bash
 
-Alpine Linux hosts' eth1 interfaces also need to be provisioned <br>
-You can do that by running the example command below for each host
-
-> ifconfig eth1 192.168.101.2 netmask 255.255.255.240 broadcast 0.0.0.0
+You can connect to SRLinux nodes (ie host-11) 
+> docker exec -ti clab-muzolab-spine1 sr_cli
 
 
-This will have installed an empty configuration.
-If you wish to start your container environment just the same as the actual lab environment, you have to add some configuration in advance.
-for each srlinux node copy and paste the related command file
-ie for leaf1: leaf1 infoflat.txt
-
-<b>Important Note !</b> <br>
-
-after logging in the srlinux containers, to switch to srlinux environment, type
->sr_cli
 
 Thanks 
 
