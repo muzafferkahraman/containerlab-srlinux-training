@@ -23,7 +23,7 @@ set / interface ethernet-1/10 subinterface 0
 set / interface ethernet-1/10 subinterface 0 type routed
 set / interface ethernet-1/10 subinterface 0 admin-state enable
 set / interface ethernet-1/10 subinterface 0 ipv4
-set / interface ethernet-1/10 subinterface 0 ipv4 address 172.100.0.0/31
+set / interface ethernet-1/10 subinterface 0 ipv4 address 172.200.0.0/31
 
 set / interface lo0
 set / interface lo0 admin-state enable
