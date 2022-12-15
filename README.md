@@ -19,10 +19,6 @@ To setup the training lab environment
 After the script runs sucessfully, a  <b>docker ps -a </b> check should return an ouput like below
 ![](containers.jpg)
 
-Alpine Linux hosts also need to be configured <br>
-You can do that by running 
-> sh configure_hosts.sh
-
 Now you must be able to ping hosts from each other <br>
 
 from host10: 
