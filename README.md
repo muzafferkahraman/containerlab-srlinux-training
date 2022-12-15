@@ -36,7 +36,7 @@ from host20:
 You can connect to host nodes (ie host-11) 
 > docker exec -ti clab-muzolab-host11 bash
 
-You can connect to SRLinux nodes (ie host-11) 
+You can connect to SRLinux nodes (ie spine1) 
 > docker exec -ti clab-muzolab-spine1 sr_cli
 
 
