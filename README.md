@@ -36,7 +36,7 @@ You can connect to SRLinux nodes (ie spine1)
 > docker exec -ti clab-muzolab-spine1 sr_cli
 
 
-Thanks 
+Thanks very much
 
 
 
